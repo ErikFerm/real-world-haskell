@@ -9,6 +9,12 @@ data BillingInfo 	= CreditCard CardNumber CardHolder Address
 					| Invoice CustomerID
 				 		deriving(Show)
 
+data Customer = Customer {
+	customerID 		:: CustomerID,
+	customerName 	:: String,
+	customerAddress	:: Address 
+	} deriving (Show)
+
 type CardHolder = String
 type CardNumber = String
 type Address	= [String]
@@ -22,6 +28,5 @@ myInfo = 	Book 1234 "Testing RealWorld Haskell"
 
 bookID 		(Book id title authors) = id
 bookTitle	(Book id title authors) = title
-
-bookAuthors :: BookInfo -> Authors
 bookAuthors	(Book id title authors) = authors
+
