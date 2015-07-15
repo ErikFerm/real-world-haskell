@@ -12,3 +12,4 @@ lend2 amount balance =
 		where 
 			reserve 	= 100
 			newBalance	= balance - amount
+
