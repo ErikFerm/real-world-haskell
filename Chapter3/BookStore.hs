@@ -32,4 +32,3 @@ myInfo =    Book 1234 "Testing RealWorld Haskell"
 bookID      (Book id title authors) = id
 bookTitle   (Book id title authors) = title
 bookAuthors (Book id title authors) = authors
-
