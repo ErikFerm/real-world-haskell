@@ -1,6 +1,7 @@
-pluralise :: String -> [int] -> [String]
+pluralise :: String -> [Int] -> [String]
 pluralise word counts = map plural counts
-    where plural 0 = "no " ++ word ++ "s"
+    where plural :: Int -> String
+          plural 0 = "no " ++ word ++ "s"
           plural 1 = "one " ++ word 
-          plural n = n ++ " " ++ word ++ "s"
+          plural n = show n ++ " " ++ word ++ "s"
 
