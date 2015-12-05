@@ -1,3 +1,6 @@
+main :: IO ()
+main = undefined
+
 -- Exercise 1 & 2
 listLength :: Num b => [a] -> b
 listLength []       = 0
@@ -128,7 +131,7 @@ sortPoints (p:ps) ip = smaller ++ [p] ++ larger
     larger  = sortPoints [x | x <- ps, test x > test p] ip
     test a
       | a == ip   = -0.1
-      | otherwise = acos $ dotProduct (xAxis) (normalizeVector $ createVector ip a)
+      | otherwise = acos $ dotProduct xAxis (normalizeVector $ createVector ip a)
     xAxis = Point2D 1 0
 sortPoints [] ip = []
 
@@ -142,5 +145,10 @@ grahamScan l = calculate $ sortPoints l $ findLowestPoint l
       | ccw [p1,p2,head l] > 0 = [p1,p2]
       | otherwise              = []
     calculate _ = []
+
+
+
+
+
 
 
